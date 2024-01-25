@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div {
+          font-family: Arial;
+          font-size: 21px;
+          border: medium solid black;
+          background-color: blue;
+        }
+
+        body {
+        background-color: #CCCCCC;
+        }
+    </style>
+
+</head>
+
+<body>
+
+  <h1>ООО "Пошла родимая"</h1>
+  <div style="border">
+      <form method="post" action="{% url 'main1' %}">
+        {% csrf_token %}
+        <button type="submit">Главная</button>
+      </form>
+      <form method="post" action="{% url 'main2' %}">
+        {% csrf_token %}
+        <button type="submit">О нас</button>
+      </form>
+  </div>
+  <h2>СЕНО для вашего скота ДАРОМ не даем</h2>
+  <hr>
+  <p>Недовольные клиенты:</p>
+
+  <form>
+        <h3>Клиент 1:</h3>
+      <p>Инфо о клиенте</p>
+  </form>
+
+  <form>
+        <h3>Клиент 2:</h3>
+      <p>Инфо о клиенте</p>
+  </form>
+
+</body>
+
+</html>
